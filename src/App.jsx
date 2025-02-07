@@ -1,11 +1,12 @@
-import { useState } from 'react'
 import './App.css'
+import { MainPage } from './Pages/main-page/MainPage'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+    <>
+    <MainPage />
     <div>наша приложенька, уиии</div>
+    </>
   )
 }
 
