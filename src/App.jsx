@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+export const App = () => {
   const [count, setCount] = useState(0)
 
   return (
     <div>наша приложенька, уиии</div>
   )
 }
-
-export default App
