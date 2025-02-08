@@ -1,6 +1,6 @@
 import { useFavourites } from '../../hooks'
 
-export const Favourites = () => {
+export const FavouritesPage = () => {
 	const { favourites, toggleFavourite } = useFavourites()
 	
 	if (favourites.length === 0) {
