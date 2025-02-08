@@ -1,4 +1,5 @@
 import { useState, useLayoutEffect } from 'react'
+import { MembersList } from '../../components/members-list.jsx'
 
 export const MainPage = () => {
   const [devsData, setDevsData] = useState([]);
@@ -11,11 +12,7 @@ export const MainPage = () => {
 
   return (
     <main>
-      {devsData.map((dev) => (
-        <div key={dev.id}>
-          <p>{dev.name}</p>
-        </div>
-      ))}
+      <MembersList membersList={devsData}/>
     </main>
   );
 };

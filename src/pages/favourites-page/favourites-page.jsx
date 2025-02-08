@@ -4,7 +4,7 @@ export const FavouritesPage = () => {
 	const { favourites, toggleFavourite } = useFavourites()
 	
 	if (favourites.length === 0) {
-		return <div>Избранных участников пока нет</div>
+		return <div>Избранных участников пока нет...</div>
 	}
 
 	return (
