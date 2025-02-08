@@ -1,15 +1,16 @@
-import { Result } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
+import { Result } from 'antd'
 
-export default function NotFoundPage() {
-  const navigate = useNavigate();
+export const NotFoundPage = () => {
+  const navigate = useNavigate()
+
   return (
     <Result
       status="404"
       title="404"
       subTitle="Cтраница, которую вы посетили, не существует."
       extra={
-        <button type="primary" onClick={() => navigate("/")}>
+        <button type="primary" onClick={() => navigate('/')}>
           Вернуться на главную
         </button>
       }

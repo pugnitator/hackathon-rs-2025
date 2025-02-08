@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import ItemList from '../../components/ItemList';
+import { useState, useLayoutEffect } from 'react'
+import { MembersList } from '../../components/members-list.jsx'
 
 export const MainPage = () => {
   const [devsData, setDevsData] = useState([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     fetch('http://localhost:3005/devs')
       .then((res) => res.json())
       .then((data) => setDevsData(data));
@@ -12,7 +12,7 @@ export const MainPage = () => {
 
   return (
     <main>
-      <ItemList itemList={devsData}/>
+      <MembersList membersList={devsData}/>
     </main>
   );
 };
