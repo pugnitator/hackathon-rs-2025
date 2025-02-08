@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ItemList from '../../components/ItemList';
 
 export const MainPage = () => {
   const [devsData, setDevsData] = useState([]);
@@ -11,11 +12,7 @@ export const MainPage = () => {
 
   return (
     <main>
-      {devsData.map((dev) => (
-        <div key={dev.id}>
-          <p>{dev.name}</p>
-        </div>
-      ))}
+      <ItemList itemList={devsData}/>
     </main>
   );
 };
