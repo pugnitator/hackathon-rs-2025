@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ItemList from '../../components/ItemList';
+import {ItemList} from '../../components/ItemList';
 
 export const MainPage = () => {
   const [devsData, setDevsData] = useState([]);
@@ -7,7 +7,9 @@ export const MainPage = () => {
   useEffect(() => {
     fetch('http://localhost:3005/devs')
       .then((res) => res.json())
-      .then((data) => setDevsData(data));
+      .then((data) => {
+        setDevsData(data)
+      });
   }, []);
 
   return (
