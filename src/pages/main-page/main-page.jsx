@@ -1,15 +1,15 @@
-import { useState, useLayoutEffect } from 'react';
-import PropTypes from 'prop-types';
-import { MembersList } from '../../components/members-list.jsx';
-import { Header } from '../../components/header.jsx';
-import backgroundImage from '../../assets/image-2-2.jpg';
-import styled from 'styled-components';
+import { useState, useLayoutEffect } from "react";
+import PropTypes from "prop-types";
+import { MembersList } from "../../components/members-list.jsx";
+import { Header } from "../../components/header.jsx";
+import backgroundImage from "../../assets/backgroundImg.png";
+import styled from "styled-components";
 
 const MainPageContainer = ({ className }) => {
   const [devsData, setDevsData] = useState([]);
 
   useLayoutEffect(() => {
-    fetch('http://localhost:3005/devs')
+    fetch("http://localhost:3005/devs")
       .then((res) => res.json())
       .then((data) => setDevsData(data));
   }, []);
@@ -18,11 +18,6 @@ const MainPageContainer = ({ className }) => {
     <main className={className}>
       <section className="main-page-info">
         <Header />
-        <img
-          className="background-image"
-          src={backgroundImage}
-          alt="background photo"
-        />
         <div className="marketing-tricks">
           <h2>Веб-разработчики</h2>
           <ul className="list-tricks">
@@ -34,8 +29,8 @@ const MainPageContainer = ({ className }) => {
       </section>
       <section className="devs-info">
         <h2 className="team-info">Наша Команда</h2>
-        <div className='developers'>
-        <MembersList membersList={devsData} />
+        <div className="developers">
+          <MembersList membersList={devsData} />
         </div>
       </section>
     </main>
@@ -46,8 +41,9 @@ export const MainPage = styled(MainPageContainer)`
     width: 100vw;
     height: 100vh;
     position: relative;
+    background-image: url(${backgroundImage});
+    background-size: cover;
   }
-
 
   & .marketing-tricks {
     position: absolute;
@@ -93,7 +89,6 @@ export const MainPage = styled(MainPageContainer)`
     display: flex;
     padding: 120px;
   }
-
 `;
 
 MainPageContainer.propTypes = {
