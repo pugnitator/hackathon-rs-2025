@@ -5,10 +5,6 @@ import { MembersList } from "../../components/members-list.jsx";
 export const FavouritesPage = () => {
   const { favourites } = useFavourites();
 
-  // if (favourites.length === 0) {
-  //   return <div>Избранных участников пока нет...</div>;
-  // }
-
   return (
     <FavouriteUsers>
       <h2>Избранные участники</h2>

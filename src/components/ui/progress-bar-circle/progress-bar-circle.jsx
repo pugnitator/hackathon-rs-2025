@@ -9,7 +9,7 @@ export const ProgressBarCircle = ({ progress, title }) => {
       <Progress
         type="circle"
         percent={progress}
-        size={[300, 20]}
+        size={164}
         strokeColor="#6C63FF"
       />
     </section>

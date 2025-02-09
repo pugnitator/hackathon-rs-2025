@@ -7,11 +7,11 @@
       "age": "18",
       "image_url": "https://i.pinimg.com/736x/8d/61/2a/8d612a140d95add3898df8b3ba2d566f.jpg",
       "about": "Чилловый парень...",
-      "contact": "@just_sancho",
+      "contact": "https://t.me/just_sancho",
       "occupation": "херней",
-      "HTML": "90%",
-      "CSS": "80%",
-      "JS": "60%",
+      "HTML": "90",
+      "CSS": "80",
+      "JS": "60",
       "badge": "няшка"
     },
     {
@@ -40,11 +40,11 @@
       "age": "28",
       "image_url": "https://i.pinimg.com/736x/f4/cb/34/f4cb340321aea710b0b7b596669cc4e3.jpg",
       "about": "Готова пахать. Буду очень рада, если возьмете меня на работу",
-      "contact": "@katya116688",
+      "contact": "https://t.me/katya116688",
       "occupation": "лииид",
-      "HTML": "70%",
-      "CSS": "60%",
-      "JS": "60%",
+      "HTML": "70",
+      "CSS": "60",
+      "JS": "60",
       "badge": "вкусняшка"
     },
     {
@@ -54,11 +54,11 @@
       "age": "37",
       "image_url": "https://i.pinimg.com/736x/c7/25/49/c725490b2e7b3a6d445b0f6e48d59f52.jpg",
       "about": "Junior веб-разработчик. ",
-      "contact": "@igorfrunze",
+      "contact": "https://t.me/igorfrunze",
       "occupation": "Главная",
-      "HTML": "80%",
-      "CSS": "75%",
-      "JS": "50%",
+      "HTML": "80",
+      "CSS": "75",
+      "JS": "50",
       "badge": "черепашка"
     },
     {
@@ -68,11 +68,11 @@
       "age": "35",
       "image_url": "https://i.pinimg.com/550x/7d/d3/fc/7dd3fc93e369d4dd65f87ad7d82c1913.jpg",
       "about": "Простой парень.",
-      "contact": "@manzaero",
+      "contact": "https://t.me/manzaero",
       "occupation": "практикую",
-      "HTML": "50%",
-      "CSS": "50%",
-      "JS": "40%",
+      "HTML": "50",
+      "CSS": "50",
+      "JS": "40",
       "badge": "чебуратор"
     },
     {

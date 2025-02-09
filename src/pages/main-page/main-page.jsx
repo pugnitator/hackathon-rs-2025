@@ -4,15 +4,14 @@ import { MembersList } from "../../components/members-list.jsx";
 import { Header } from "../../components/header.jsx";
 import backgroundImage from "../../assets/image-2-2.jpg";
 import styled from "styled-components";
+import {getUsers} from "../../api/index.js";
 import { useLocation } from "react-router-dom";
 
 const MainPageContainer = ({ className }) => {
   const [devsData, setDevsData] = useState([]);
 
   useLayoutEffect(() => {
-    fetch("http://localhost:3005/devs")
-      .then((res) => res.json())
-      .then((data) => setDevsData(data));
+    getUsers().then(loadedUsers => setDevsData(loadedUsers))
   }, []);
 
   const { hash } = useLocation();
