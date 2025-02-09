@@ -2,35 +2,27 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { sendUserToServer } from "../../hooks/use-send-user-to-server.js";
 import { useForm } from "../../hooks/use-form.js";
-import { userValidationSchema } from "../../hooks/use-user-valid-schema.js";
-import {ButtonSmart} from "../../components/ui/button/button-smart.jsx";
 
 export const CreateUser = () => {
     const navigate = useNavigate();
 
-    const { formData, errors, handleChange, validateForm, resetForm } = useForm(
-        {
-            id: "",
-            name: "",
-            lastname: "",
-            age: null,
-            image_url: "",
-            about: "",
-            contact: "",
-            occupation: "",
-            HTML: "",
-            CSS: "",
-            JS: "",
-            badge: "",
-        },
-        userValidationSchema
-    );
+    const { formData, handleChange, resetForm } = useForm({
+        id: "",
+        name: "",
+        lastname: "",
+        age: "",
+        image_url: "",
+        about: "",
+        contact: "",
+        occupation: "",
+        HTML: "",
+        CSS: "",
+        JS: "",
+        badge: "",
+    });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const isValid = await validateForm();
-        if (!isValid) return;
 
         const newUser = {
             ...formData,
@@ -46,8 +38,6 @@ export const CreateUser = () => {
         navigate("/");
     };
 
-    const isValid = Object.keys(errors).length !== 0;
-
     return (
         <FormContainer onSubmit={handleSubmit}>
             <input
@@ -57,7 +47,6 @@ export const CreateUser = () => {
                 value={formData.name}
                 onChange={handleChange}
             />
-            {errors.name && <Error>{errors.name}</Error>}
             <input
                 type="text"
                 name="lastname"
@@ -65,7 +54,6 @@ export const CreateUser = () => {
                 value={formData.lastname}
                 onChange={handleChange}
             />
-            {errors.lastname && <Error>{errors.lastname}</Error>}
             <input
                 type="number"
                 name="age"
@@ -73,7 +61,6 @@ export const CreateUser = () => {
                 value={formData.age}
                 onChange={handleChange}
             />
-            {errors.age && <Error>{errors.age}</Error>}
             <input
                 type="text"
                 name="image_url"
@@ -81,14 +68,12 @@ export const CreateUser = () => {
                 value={formData.image_url}
                 onChange={handleChange}
             />
-            {errors.image_url && <Error>{errors.image_url}</Error>}
             <textarea
                 name="about"
                 placeholder="О себе"
                 value={formData.about}
                 onChange={handleChange}
             ></textarea>
-            {errors.about && <Error>{errors.about}</Error>}
             <input
                 type="text"
                 name="contact"
@@ -96,7 +81,6 @@ export const CreateUser = () => {
                 value={formData.contact}
                 onChange={handleChange}
             />
-            {errors.contact && <Error>{errors.contact}</Error>}
             <input
                 type="text"
                 name="occupation"
@@ -104,7 +88,6 @@ export const CreateUser = () => {
                 value={formData.occupation}
                 onChange={handleChange}
             />
-            {errors.occupation && <Error>{errors.occupation}</Error>}
             <input
                 type="number"
                 name="HTML"
@@ -112,7 +95,6 @@ export const CreateUser = () => {
                 value={formData.HTML}
                 onChange={handleChange}
             />
-            {errors.HTML && <Error>{errors.HTML}</Error>}
             <input
                 type="number"
                 name="CSS"
@@ -120,7 +102,6 @@ export const CreateUser = () => {
                 value={formData.CSS}
                 onChange={handleChange}
             />
-            {errors.CSS && <Error>{errors.CSS}</Error>}
             <input
                 type="number"
                 name="JS"
@@ -128,7 +109,6 @@ export const CreateUser = () => {
                 value={formData.JS}
                 onChange={handleChange}
             />
-            {errors.JS && <Error>{errors.JS}</Error>}
             <input
                 type="text"
                 name="badge"
@@ -136,12 +116,7 @@ export const CreateUser = () => {
                 value={formData.badge}
                 onChange={handleChange}
             />
-            {errors.badge && <Error>{errors.badge}</Error>}
-            <ButtonSmart
-                color="#6C63FF"
-                onClick={() => handleSubmit()}
-                text="Создать"
-            />
+            <button type="submit">Добавить пользователя</button>
         </FormContainer>
     );
 };
@@ -154,9 +129,4 @@ const FormContainer = styled.form`
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
-`;
-
-const Error = styled.div`
-  color: red;
-  font-size: 12px;
 `;
