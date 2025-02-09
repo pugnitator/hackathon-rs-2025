@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import { MainPage, FavouritesPage, NotFoundPage } from "./pages";
-// import { Header } from './components'
 import "./App.css";
 import { Header } from "./components/header";
 
@@ -12,7 +11,7 @@ export const App = () => {
         <Route path="/teammate" element={
             <>
               <Header />
-              <MainPage /> {/* подставить нужную страницу */}
+              <MainPage /> {/* страничка участнкиа */}
             </>
           }
         />

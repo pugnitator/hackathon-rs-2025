@@ -1,9 +1,10 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react";
 import PropTypes from "prop-types";
 import { MembersList } from "../../components/members-list.jsx";
 import { Header } from "../../components/header.jsx";
 import backgroundImage from "../../assets/image-2-2.jpg";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 
 const MainPageContainer = ({ className }) => {
   const [devsData, setDevsData] = useState([]);
@@ -14,9 +15,19 @@ const MainPageContainer = ({ className }) => {
       .then((data) => setDevsData(data));
   }, []);
 
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <main className={className}>
-      <section className="main-page-info">
+      <section id='description' className="main-page-info">
         <Header />
         <div className="marketing-tricks">
           <h2>Веб-разработчики</h2>
@@ -27,7 +38,7 @@ const MainPageContainer = ({ className }) => {
           </ul>
         </div>
       </section>
-      <section className="devs-info">
+      <section id='team' className="devs-info">
         <h2 className="team-info">Наша Великолепная Команда</h2>
         <div className="developers">
           <MembersList membersList={devsData} />
