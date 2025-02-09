@@ -68,8 +68,8 @@ const CustomUserCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 344px;
-  height: 40vh;
+  width: 260px;
+  height: 345px;
   background: white;
   border-radius: 20px;
   overflow: hidden;

@@ -1,7 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import { MainPage, FavouritesPage, NotFoundPage } from "./pages";
+import {Route, Routes} from "react-router-dom";
+import {FavouritesPage, MainPage, NotFoundPage} from "./pages";
 import "./App.css";
-import { Header } from "./components/header";
+import {Header} from "./components/header";
+import {CreateUser} from "./pages/create-user/create-user.jsx";
 
 export const App = () => {
   return (
@@ -29,6 +30,12 @@ export const App = () => {
             </>
           }
         />
+          <Route path="/create" element={
+              <>
+                  <Header/>
+                  <CreateUser/>
+              </>
+          }/>
       </Routes>
     </>
   );
