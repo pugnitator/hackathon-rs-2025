@@ -1,36 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-import { MainPage, FavouritesPage, NotFoundPage } from "./pages";
-// import { Header } from './components'
-import "./App.css";
-import { Header } from "./components/header";
+import { useState } from 'react'
+import './App.css'
 
-export const App = () => {
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/teammate" element={
-            <>
-              <Header />
-              <MainPage /> {/* подставить нужную страницу */}
-            </>
-          }
-        />
-        <Route path="/favorites" element={
-            <>
-              <Header />
-              <FavouritesPage />
-            </>
-          }
-        />
-        <Route path="*" element={
-            <>
-              <Header />
-              <NotFoundPage />
-            </>
-          }
-        />
-      </Routes>
-    </>
-  );
-};
+    <div>наша приложенька, уиии</div>
+  )
+}
+
+export default App
