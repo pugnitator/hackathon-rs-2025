@@ -23,9 +23,9 @@
       "about": "Я верстальщик и веб-разработчик, опыт в данной сфере более 6 лет. Свободно владею английским, легко вливаюсь в новый коллектив.",
       "contact": "https://vk.com/id20815685",
       "occupation": "херней",
-      "HTML": "99%",
-      "CSS": "99%",
-      "JS": "75%",
+      "HTML": "99",
+      "CSS": "99",
+      "JS": "75",
       "badge": "милашка",
       "portfolio_urls": [
         "https://sun9-67.userapi.com/impg/rsZP5hut03jGr_7hK6ks3oQ04YROW_s7xXW23g/iHDj65O0N_o.jpg?size=720x542&quality=95&sign=614b182f405684337df6ce1a9f93291f&type=album",
@@ -74,34 +74,6 @@
       "CSS": "50",
       "JS": "40",
       "badge": "чебуратор"
-    },
-    {
-      "id": 42,
-      "name": "e",
-      "lastname": "w",
-      "age": "32",
-      "image_url": "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg",
-      "about": "rere",
-      "contact": "sdf",
-      "occupation": "sdf",
-      "HTML": "32",
-      "CSS": "23",
-      "JS": "23",
-      "badge": "нек"
-    },
-    {
-      "id": 526,
-      "name": "223",
-      "lastname": "32",
-      "age": "32",
-      "image_url": "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg",
-      "about": "32",
-      "contact": "32",
-      "occupation": "32",
-      "HTML": "32",
-      "CSS": "32",
-      "JS": "32",
-      "badge": "32"
     }
   ]
 }
