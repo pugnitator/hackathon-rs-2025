@@ -22,18 +22,7 @@ MembersList.propTypes = {
 };
 
 const List = styled.div`
-  color: black;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  max-width: 100vw;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   gap: 50px;
-  flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-  }
 `
