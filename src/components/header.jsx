@@ -26,6 +26,8 @@ export const Header = () => {
     { text: "Главная", path: "/#description" },
     { text: "Наша команда", path: "/#team" },
     { text: "Избранное", path: "/favorites" },
+    { text: 'Новый разработчик', path: "/create" },
+
   ];
 
   return (
