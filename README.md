@@ -8,3 +8,5 @@
 - Ant design
 
 ## Установка и запуск
+npm run server - запустит json-server
+npm run dev - запустит проект в браузере
