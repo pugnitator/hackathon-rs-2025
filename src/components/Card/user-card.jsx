@@ -25,15 +25,14 @@ export const UserCard = ({ user }) => {
 					{user.badge}
 				</CustomUserBadge>
 
-				<UserOccupation>
-					<span>{user.occupation}</span>
-					<span>{user.location}</span>
-				</UserOccupation>
-
-
-
 			</TopSection>
 			<BottomSection>
+				<UserOccupation>
+					<span>В проекте занимался: {user.occupation}.</span>
+				</UserOccupation>
+				
+				<p>О себе:</p>
+
 				<p>{user.about}</p>
 				<MoreButton>Подробнее</MoreButton>
 			</BottomSection>
@@ -105,7 +104,7 @@ const UserName = styled.h3`
 const UserOccupation = styled.p`
     font-size: 14px;
     opacity: 0.8;
-		margin-top: 5px;
+		margin-top: -10px;
 `;
 
 const BottomSection = styled.div`
