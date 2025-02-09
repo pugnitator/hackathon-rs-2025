@@ -2,7 +2,6 @@ import { FavIcon } from "./components/fav-icon.jsx";
 import styled from "styled-components";
 import { useFavourites } from "../../hooks/index.js";
 import PropTypes from "prop-types";
-import { Slider } from "../ui/slider/Slider.jsx";
 
 export const UserCard = ({ user }) => {
   const { favourites, toggleFavourite } = useFavourites();
