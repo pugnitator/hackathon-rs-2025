@@ -28,7 +28,7 @@ const MainPageContainer = ({ className }) => {
         </div>
       </section>
       <section className="devs-info">
-        <h2 className="team-info">Наша Команда</h2>
+        <h2 className="team-info">Наша Великолепная Команда</h2>
         <div className="developers">
           <MembersList membersList={devsData} />
         </div>
@@ -37,6 +37,8 @@ const MainPageContainer = ({ className }) => {
   );
 };
 export const MainPage = styled(MainPageContainer)`
+  margin-bottom: 50px;
+  
   & .main-page-info {
     width: 100vw;
     height: 100vh;
@@ -53,7 +55,7 @@ export const MainPage = styled(MainPageContainer)`
 
   & h2 {
     font-size: 50px;
-    margin-bottom: 50px;
+    margin-block: 50px;
   }
 
   & .list-tricks {
@@ -72,22 +74,19 @@ export const MainPage = styled(MainPageContainer)`
     z-index: -1;
   }
   & .devs-info {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
   }
 
   & .team-info {
-    position: absolute;
     font-size: 36px;
-    left: 100px;
-    top: 20px;
     color: #6c63ff;
   }
 
   & .developers {
     display: flex;
-    padding: 120px;
+    padding: 0 100px 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 `;
 

@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect, useLayoutEffect} from 'react'
 import { getFavouritesFromLocalStorage, saveFavouritesToLocalStorage } from '../../utils'
 import { FavouritesContext } from './favourites-context.jsx'
 
 export const FavouritesProvider = ({ children }) => {
-	const [favourites, setFavourites] = useState([])
-
-	useEffect(() => {
+	const [favourites, setFavourites] = useState(() => {
 		const favouritesFromLocalStorage = getFavouritesFromLocalStorage()
-		setFavourites(favouritesFromLocalStorage)
-	}, [])
+
+		return favouritesFromLocalStorage || []
+	})
 
 	useEffect(() => {
 		saveFavouritesToLocalStorage(favourites)
-	}, [favourites])
+	}, [favourites]);
 
 	return (
 		<FavouritesContext.Provider value={{favourites, setFavourites}}>

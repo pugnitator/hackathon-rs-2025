@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Button } from "antd";
-import "./Button.scss";
+import "./button.scss";
 
 export const ButtonSmart = ({ color, text, clickFunc }) => {
   const handleClick = (clickFunc) => {

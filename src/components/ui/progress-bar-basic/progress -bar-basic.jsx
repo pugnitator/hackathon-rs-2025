@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Progress } from "antd";
-import "./progress-basic.scss";
+import "./progress-bar-basic.scss";
 
 export const ProgressBarBasic = ({ progress, title }) => {
   return (
