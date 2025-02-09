@@ -5,14 +5,20 @@ import { MembersList } from "../../components/members-list.jsx";
 export const FavouritesPage = () => {
   const { favourites } = useFavourites();
 
-  if (favourites.length === 0) {
-    return <div>Избранных участников пока нет...</div>;
-  }
+  // if (favourites.length === 0) {
+  //   return <div>Избранных участников пока нет...</div>;
+  // }
 
   return (
     <FavouriteUsers>
       <h2>Избранные участники</h2>
-	  <MembersList membersList={favourites}/>
+      {favourites.length === 0 ? (
+        <div>Избранных участников пока нет...</div>
+      ) : (
+        <ListContainer>
+          <MembersList membersList={favourites} />
+        </ListContainer>
+      )}
     </FavouriteUsers>
   );
 };
@@ -24,11 +30,19 @@ const FavouriteUsers = styled.article`
 
   & h2 {
     margin: 50px auto;
-    color: pink;
+    color: #6c63ff;
     font-size: 32px;
   }
 
   @media (max-width: 540px) {
     padding: 0 20px 20px;
   }
+`;
+
+const ListContainer = styled.main`
+  display: flex;
+  padding: 0 100px 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;

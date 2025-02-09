@@ -2,6 +2,9 @@ import { FavIcon } from "./components/fav-icon.jsx";
 import styled from "styled-components";
 import { useFavourites } from "../../hooks/index.js";
 import PropTypes from "prop-types";
+import { ButtonSmart } from "../ui/button/button-smart.jsx";
+import { UserBadge } from "../ui/badge/user-badge.jsx";
+import { useNavigate } from "react-router-dom";
 
 export const UserCard = ({ user }) => {
   const { favourites, toggleFavourite } = useFavourites();
@@ -15,6 +18,7 @@ export const UserCard = ({ user }) => {
           isFavorite={isFavourite}
           onClick={() => toggleFavourite(user)}
         />
+
 
         <ProfileImage
           src={user.image_url}
@@ -56,6 +60,7 @@ UserCard.propTypes = {
 const CustomUserCard = styled.div`
   display: flex;
   flex-direction: column;
+
   gap: 20px;
   width: 344px;
   height: 518px;
@@ -107,6 +112,7 @@ const UserOccupation = styled.p`
 `;
 
 const BottomSection = styled.div`
+
   padding: 15px;
   flex-grow: 1;
   display: flex;
