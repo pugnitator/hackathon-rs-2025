@@ -12,4 +12,5 @@ export const UserBadge = ({ badgeText, badgeColor, children }) => {
 UserBadge.propTypes = {
   badgeText: PropTypes.string,
   badgeColor: PropTypes.string,
+  children: PropTypes.node,
 };

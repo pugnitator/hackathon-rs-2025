@@ -99,6 +99,10 @@ export const MainPage = styled(MainPageContainer)`
     z-index: -1;
   }
   & .devs-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   & .team-info {
@@ -108,6 +112,7 @@ export const MainPage = styled(MainPageContainer)`
 
   & .developers {
     display: flex;
+    max-width: 2000px;
     padding: 0 100px 100px;
     justify-content: center;
     align-items: center;
