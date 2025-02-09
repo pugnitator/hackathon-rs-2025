@@ -12,7 +12,7 @@ export const UserCard = ({ user }) => {
   const isFavourite = favourites.some((fav) => fav.id === user.id);
 
   const onClickMoreInfo = () => {
-    navigate("/teammate");
+    navigate(`/teammate/${user.id}`);
   };
 
   return (
@@ -49,6 +49,7 @@ export const UserCard = ({ user }) => {
     </CustomUserCard>
   );
 };
+
 
 UserCard.propTypes = {
   user: PropTypes.shape({
