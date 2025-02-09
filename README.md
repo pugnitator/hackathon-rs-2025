@@ -2,9 +2,9 @@
 Проект реализован в рамках хакатона
 
 ## Технологии:
--JS
--Vite
--React
--Ant design
+- JS
+- Vite
+- React
+- Ant design
 
 ## Установка и запуск

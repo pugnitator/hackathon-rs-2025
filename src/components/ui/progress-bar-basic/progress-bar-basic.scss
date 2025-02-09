@@ -1,0 +1,12 @@
+.progress {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__label {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+}
