@@ -8,8 +8,12 @@ import { useNavigate } from "react-router-dom";
 
 export const UserCard = ({ user }) => {
   const { favourites, toggleFavourite } = useFavourites();
-
+  const navigate = useNavigate();
   const isFavourite = favourites.some((fav) => fav.id === user.id);
+
+  const onClickMoreInfo = () => {
+    navigate("/teammate");
+  };
 
   return (
     <CustomUserCard>
@@ -19,25 +23,28 @@ export const UserCard = ({ user }) => {
           onClick={() => toggleFavourite(user)}
         />
 
-
-        <ProfileImage
-          src={user.image_url}
-          alt={`${user.name} ${user.lastname}`}
-        />
+        <UserBadge badgeText={user.badge} badgeColor="red">
+          <ProfileImage
+            src={user.image_url}
+            alt={`${user.name} ${user.lastname}`}
+          />
+        </UserBadge>
 
         <UserName>{`${user.name}, ${user.age} лет`}</UserName>
-
-        <CustomUserBadge>{user.badge}</CustomUserBadge>
-      </TopSection>
-      <BottomSection>
         <UserOccupation>
           <span>В проекте занимался: {user.occupation}.</span>
         </UserOccupation>
-
-        <p>О себе:</p>
-
-        <p>{user.about}</p>
-        <MoreButton>Подробнее</MoreButton>
+      </TopSection>
+      <BottomSection>
+        <AboutText>О себе:</AboutText>
+        <AboutConteiner>
+          <p>{user.about}</p>
+        </AboutConteiner>
+        <ButtonSmart
+          text="Подробнее"
+          color="#6c63ff"
+          clickFunc={onClickMoreInfo}
+        />
       </BottomSection>
     </CustomUserCard>
   );
@@ -60,10 +67,9 @@ UserCard.propTypes = {
 const CustomUserCard = styled.div`
   display: flex;
   flex-direction: column;
-
-  gap: 20px;
+  gap: 10px;
   width: 344px;
-  height: 518px;
+  height: 40vh;
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -79,16 +85,6 @@ const TopSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const CustomUserBadge = styled.div`
-  background-color: #f9f0ff;
-  color: #541cab;
-  box-shadow: 2px 2px 10px #541cab;
-  border: 1px solid #d3adf7;
-  border-radius: 5px;
-  padding: 0 5px;
-  cursor: default;
 `;
 
 const ProfileImage = styled.img`
@@ -112,26 +108,22 @@ const UserOccupation = styled.p`
 `;
 
 const BottomSection = styled.div`
-
-  padding: 15px;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 15px;
 `;
 
-const MoreButton = styled.button`
-  width: 100%;
-  padding: 10px;
-  background: #6c63ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: auto;
-  transition: background 0.3s;
+const AboutText = styled.p`
+  text-align: start;
+  font-size: 18px;
+  font-weight: 500;
+`;
 
-  &:hover {
-    background: #5847a6;
-  }
+const AboutConteiner = styled.div`
+  height: 100px;
+  padding: 0 10px;
+  text-align: start;
+  overflow: hidden;
 `;
