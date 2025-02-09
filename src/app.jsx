@@ -3,16 +3,17 @@ import { MainPage, FavouritesPage, NotFoundPage } from "./pages";
 // import { Header } from './components'
 import "./App.css";
 import { Header } from "./components/header";
+import {MemberPage} from "./pages/member-page/member-page.jsx";
 
 export const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/teammate" element={
+        <Route path="/teammate/:id" element={
             <>
               <Header />
-              <MainPage /> {/* подставить нужную страницу */}
+              <MemberPage />
             </>
           }
         />
@@ -30,6 +31,13 @@ export const App = () => {
             </>
           }
         />
+
+        <Route path='/member-not-exist' element={
+          <>
+            <Header />
+            <NotFoundPage />
+          </>
+        } />
       </Routes>
     </>
   );

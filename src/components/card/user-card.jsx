@@ -1,10 +1,12 @@
-import {FavIcon} from "./components/fav-icon.jsx";
-import styled from "styled-components";
-import {useFavourites} from "../../hooks/index.js";
+import { useFavourites } from "../../hooks/index.js";
+import { FavIcon } from "./components/fav-icon.jsx";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import {useNavigate} from "react-router-dom";
 
 export const UserCard = ({ user }) => {
 	const { favourites, toggleFavourite } = useFavourites()
+	const navigate = useNavigate()
 
 	const isFavourite = favourites.some(fav => fav.id === user.id)
 
@@ -34,7 +36,7 @@ export const UserCard = ({ user }) => {
 				<p>О себе:</p>
 
 				<p>{user.about}</p>
-				<MoreButton>Подробнее</MoreButton>
+				<MoreButton onClick={() => navigate(`/teammate/${user.id}`)} >Подробнее</MoreButton>
 			</BottomSection>
 		</CustomUserCard>
 	)

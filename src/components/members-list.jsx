@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {UserCard} from "./Card/user-card.jsx";
+import {UserCard} from "./card/user-card.jsx";
 
 export const MembersList = ({ membersList }) => {
 

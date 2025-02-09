@@ -1,6 +1,6 @@
 import { useFavourites } from '../../hooks'
 import styled from "styled-components";
-import {UserCard} from "../../components/Card/user-card.jsx";
+import {UserCard} from "../../components/card/user-card.jsx";
 
 export const FavouritesPage = () => {
 	const { favourites } = useFavourites()
