@@ -4,15 +4,16 @@ import { useFavourites } from "../../hooks/index.js";
 import PropTypes from "prop-types";
 import { ButtonSmart } from "../ui/button/button-smart.jsx";
 import { UserBadge } from "../ui/badge/user-badge.jsx";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const UserCard = ({ user }) => {
   const { favourites, toggleFavourite } = useFavourites();
   const navigate = useNavigate();
+  const location = useLocation()
   const isFavourite = favourites.some((fav) => fav.id === user.id);
 
   const onClickMoreInfo = () => {
-    navigate("/teammate");
+    navigate(`/teammate/${user.id}`, { state: { from: location.pathname } });
   };
 
   return (
@@ -49,6 +50,7 @@ export const UserCard = ({ user }) => {
     </CustomUserCard>
   );
 };
+
 
 UserCard.propTypes = {
   user: PropTypes.shape({
