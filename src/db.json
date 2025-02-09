@@ -19,14 +19,19 @@
       "name": "Тимур",
       "lastname": "Маркоишвили",
       "age": "36",
-      "image_url": "https://i.pinimg.com/736x/e1/c8/e1/e1c8e1a446849b88ea7464688e769836.jpg",
+      "image_url": "https://sun9-58.userapi.com/impg/Q7vnjVz8r1vekt9MFVflFk_CSl2VorCCw2MxyA/m_Wu_dq4ekU.jpg?size=862x780&quality=95&sign=4b5b25c24d7be9dd85cef6c733e58bbc&type=album",
       "about": "Я верстальщик и веб-разработчик, опыт в данной сфере более 6 лет. Свободно владею английским, легко вливаюсь в новый коллектив.",
       "contact": "https://vk.com/id20815685",
       "occupation": "херней",
       "HTML": "99%",
       "CSS": "99%",
       "JS": "75%",
-      "badge": "милашка"
+      "badge": "милашка",
+      "portfolio_urls": [
+        "https://sun9-67.userapi.com/impg/rsZP5hut03jGr_7hK6ks3oQ04YROW_s7xXW23g/iHDj65O0N_o.jpg?size=720x542&quality=95&sign=614b182f405684337df6ce1a9f93291f&type=album",
+        "https://sun9-7.userapi.com/impg/x82If_78kDDyoXhBU_ShFjaUylOaqfJ240_w3Q/FJbcQ4srzyY.jpg?size=830x563&quality=95&sign=bf12b6cf6db73869c7e9db5029be6bc0&type=album",
+        "https://sun9-12.userapi.com/impg/GWFGFkMsKutfIUoc79zqyfXPcux-4u2tobQnjw/8RkMA1MF9J0.jpg?size=720x480&quality=95&sign=1513f5c87730991364f5a279a9d57b72&type=album"
+      ]
     },
     {
       "id": "003",
