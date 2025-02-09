@@ -74,6 +74,34 @@
       "CSS": "50%",
       "JS": "40%",
       "badge": "чебуратор"
+    },
+    {
+      "id": 42,
+      "name": "e",
+      "lastname": "w",
+      "age": "32",
+      "image_url": "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg",
+      "about": "rere",
+      "contact": "sdf",
+      "occupation": "sdf",
+      "HTML": "32",
+      "CSS": "23",
+      "JS": "23",
+      "badge": "нек"
+    },
+    {
+      "id": 526,
+      "name": "223",
+      "lastname": "32",
+      "age": "32",
+      "image_url": "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg",
+      "about": "32",
+      "contact": "32",
+      "occupation": "32",
+      "HTML": "32",
+      "CSS": "32",
+      "JS": "32",
+      "badge": "32"
     }
   ]
 }
