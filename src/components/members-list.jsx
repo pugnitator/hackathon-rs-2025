@@ -1,10 +1,18 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import {UserCard} from "./Card/user-card.jsx";
 
 export const MembersList = ({ membersList }) => {
+
+  if (!Array.isArray(membersList) || membersList.length === 0) {
+    return <p>Данные не загружены...</p>;
+  }
+
     return(
         <List>
-            {membersList.map(member => (<div key={member.id}>{member.name}</div>))}
+          {membersList.map(user => (
+              <UserCard key={user.id} user={user} />
+            ))}
         </List>
     )
 }
@@ -14,6 +22,18 @@ MembersList.propTypes = {
 };
 
 const List = styled.div`
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  color: black;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+  gap: 50px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 `

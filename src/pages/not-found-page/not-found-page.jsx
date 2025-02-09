@@ -5,15 +5,15 @@ export const NotFoundPage = () => {
   const navigate = useNavigate()
 
   return (
-    <Result
-      status="404"
-      title="404"
-      subTitle="Cтраница, которую вы посетили, не существует."
-      extra={
-        <button type="primary" onClick={() => navigate('/')}>
-          Вернуться на главную
-        </button>
-      }
-    />
+      <Result
+        status="404"
+        title="404"
+        subTitle="Cтраница, которую вы посетили, не существует."
+        extra={
+          <button type="primary" onClick={() => navigate('/')}>
+            Вернуться на главную
+          </button>
+        }
+      />
   );
 }
