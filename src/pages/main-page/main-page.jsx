@@ -2,7 +2,7 @@ import { useState, useLayoutEffect } from "react";
 import PropTypes from "prop-types";
 import { MembersList } from "../../components/members-list.jsx";
 import { Header } from "../../components/header.jsx";
-import backgroundImage from "../../assets/backgroundImg.png";
+import backgroundImage from "../../assets/image-2-2.jpg";
 import styled from "styled-components";
 
 const MainPageContainer = ({ className }) => {
@@ -38,17 +38,31 @@ const MainPageContainer = ({ className }) => {
 };
 export const MainPage = styled(MainPageContainer)`
   margin-bottom: 50px;
+
+  & .main-page-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${backgroundImage});
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1);
+    z-index: -11;
+  }
   
   & .main-page-info {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-image: url(${backgroundImage});
-    background-size: cover;
   }
 
   & .marketing-tricks {
     position: absolute;
+    color: #fff;
+    letter-spacing: 2px;
     left: 100px;
     top: 250px;
   }
