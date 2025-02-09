@@ -29,19 +29,17 @@ const HeartWrapper = styled.div`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: ${({$isFavorite}) => ($isFavorite ? "#ffe6e6" : "#f0f0f0")};
     transition: background-color 0.3s, transform 0.2s;
     position: absolute;
     top: 10px;
     right: 10px;
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
     }
 
     &:hover {
-        background-color: ${({ $isFavorite }) => ($isFavorite ? "#ffcccc" : "#ddd")};
         transform: scale(1.1);
     }
 `;
